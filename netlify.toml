@@ -1,0 +1,10 @@
+[build]
+  base = ""                            # Set if your project is inside a subfolder; leave empty if project root
+  publish = "public"                  # Folder with your built static files; change as needed
+  functions = "netlify/functions"    # Location of your serverless functions
+
+# Optional: redirect API requests to functions if using custom paths
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
