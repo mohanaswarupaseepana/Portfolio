@@ -1,0 +1,13 @@
+   {
+     "name": "mohanaswarupa",
+     "version": "1.0.0",
+     "main": "index.js",
+     "dependencies": {
+       "nodemailer": "^6.7.2"  // Ensure this line is present
+     },
+     "devDependencies": {},
+     "scripts": {
+       "build": "your-build-command" // Adjust as necessary
+     }
+   }
+   
