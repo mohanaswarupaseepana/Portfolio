@@ -1,147 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YourName | Developer Portfolio</title>
+  <title>Your Name - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="header" role="banner">
-    <nav class="nav container" aria-label="Primary navigation">
-      <div class="nav__logo" tabindex="0" aria-label="Homepage">YourName</div>
-      <ul class="nav__list" role="menubar" >
-        <li role="none"><a role="menuitem" href="#about" class="nav__link">About</a></li>
-        <li role="none"><a role="menuitem" href="#skills" class="nav__link">Skills</a></li>
-        <li role="none"><a role="menuitem" href="#projects" class="nav__link">Projects</a></li>
-        <li role="none"><a role="menuitem" href="#resume" class="nav__link">Resume</a></li>
-        <li role="none"><a role="menuitem" href="#contact" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
+  <header>
+    <div class="container navbar" role="banner">
+      <div class="logo" tabindex="0">YourName</div>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero container" aria-label="Introduction">
-      <div class="hero__avatar" tabindex="0" aria-label="Your Name's photo">
-        <img src="https://placehold.co/400x400?text=Your+Photo&font=roboto" alt="Your Name" class="hero__avatar-img" />
-      </div>
-      <div class="hero__info">
-        <h1 class="hero__title">Hi, I'm YourName</h1>
-        <p class="hero__subtitle">A passionate developer crafting elegant &amp; functional web experiences.</p>
-        <div class="hero__actions">
-          <button type="button" class="btn btn--primary" id="contact-btn" aria-label="Contact me">Contact Me</button>
-          <a href="https://example.com/your-resume.pdf" class="btn btn--outlined" target="_blank" rel="noopener noreferrer" aria-label="View or download resume">Resume</a>
-        </div>
-        <div class="hero__social" aria-label="Social media links">
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-4 0v6h-4v-12h4v2"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-          <a href="mailto:your.email@example.com" aria-label="Send email" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <path d="M22 12h-20"></path>
-              <path d="M2 7l10 7 10-7"></path>
-              <path d="M2 17h20v2H2z"></path>
-            </svg>
-          </a>
-        </div>
+    <section id="hero" role="region" aria-label="Introduction">
+      <div class="hero-content">
+        <h1>Hi, I'm Your Name</h1>
+        <p>I'm a passionate developer creating modern web experiences with clean design and smooth animations.</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact Me</button>
       </div>
     </section>
 
-    <section id="about" class="section container" aria-label="About me">
-      <h2 class="section__title">About Me</h2>
-      <p class="section__text">
-        I'm a software developer with experience in building modern web applications using JavaScript, HTML, and CSS.
-        I love crafting clean and efficient code with a focus on good design, performance, and accessibility.
-      </p>
-    </section>
-
-    <section id="skills" class="section container" aria-label="Skills and technologies">
-      <h2 class="section__title">Skills</h2>
-      <div class="skills-list" role="list">
-        <div tabindex="0" class="skill" role="listitem">JavaScript</div>
-        <div tabindex="0" class="skill" role="listitem">React</div>
-        <div tabindex="0" class="skill" role="listitem">HTML5 &amp; CSS3</div>
-        <div tabindex="0" class="skill" role="listitem">Node.js</div>
-        <div tabindex="0" class="skill" role="listitem">REST APIs</div>
-        <div tabindex="0" class="skill" role="listitem">Git &amp; GitHub</div>
-        <div tabindex="0" class="skill" role="listitem">Responsive Design</div>
-        <div tabindex="0" class="skill" role="listitem">TypeScript</div>
+    <section id="projects" role="region" aria-label="Projects showcase">
+      <h2 class="section-title">My Projects</h2>
+      <div class="project-grid">
+        <article class="project-card" tabindex="0">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f25e5f0a-139b-411c-8665-75603970f7ed.png" alt="Screenshot of Project 1 website" class="project-image" />
+          <div class="project-content">
+            <h3 class="project-title">Project One</h3>
+            <p class="project-description">A responsive web app featuring interactive maps and real-time data visualizations.</p>
+            <a href="#" class="project-link" aria-label="View Project One details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </article>
+        <article class="project-card" tabindex="0">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4cf6da69-a9ec-487d-a66e-941499225f73.png" alt="Screenshot of Project 2 mobile app" class="project-image" />
+          <div class="project-content">
+            <h3 class="project-title">Project Two</h3>
+            <p class="project-description">A sleek mobile-first design with a custom UI and smooth animations throughout.</p>
+            <a href="#" class="project-link" aria-label="View Project Two details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </article>
+        <article class="project-card" tabindex="0">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a0af1f87-a5ec-40a5-b0e7-f47e898bcba1.png" alt="Screenshot of Project 3 dashboard" class="project-image" />
+          <div class="project-content">
+            <h3 class="project-title">Project Three</h3>
+            <p class="project-description">An admin dashboard with drag-and-drop features and real-time notifications.</p>
+            <a href="#" class="project-link" aria-label="View Project Three details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="projects" class="section container" aria-label="Project portfolio">
-      <h2 class="section__title">Projects</h2>
-      <div class="projects-grid">
-        <article tabindex="0" class="project-card" aria-labelledby="project1-title">
-          <h3 id="project1-title" class="project-card__title">Portfolio Website</h3>
-          <p class="project-card__desc">
-            A sleek personal portfolio site built with semantic HTML and responsive CSS.
-          </p>
-          <button
-            class="project-card__link"
-            onclick="window.open('https://github.com/yourusername/portfolio', '_blank')"
-            aria-label="View Portfolio Website on GitHub"
-          >View on GitHub</button>
-        </article>
-        <article tabindex="0" class="project-card" aria-labelledby="project2-title">
-          <h3 id="project2-title" class="project-card__title">Task Manager App</h3>
-          <p class="project-card__desc">
-            A React-based task management app with CRUD functionality and localStorage persistence.
-          </p>
-          <button
-            class="project-card__link"
-            onclick="window.open('https://github.com/yourusername/task-manager', '_blank')"
-            aria-label="View Task Manager App on GitHub"
-          >View on GitHub</button>
-        </article>
-        <article tabindex="0" class="project-card" aria-labelledby="project3-title">
-          <h3 id="project3-title" class="project-card__title">Blog Platform</h3>
-          <p class="project-card__desc">
-            A modern blogging platform with Markdown support, built using Next.js and Tailwind CSS.
-          </p>
-          <button
-            class="project-card__link"
-            onclick="window.open('https://github.com/yourusername/blog-platform', '_blank')"
-            aria-label="View Blog Platform on GitHub"
-          >View on GitHub</button>
-        </article>
-      </div>  
-    </section>
+    <section id="contact" role="region" aria-label="Contact form">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-container">
+        <form id="contact-form" action="https://formspree.io/f/xkgbzkvj" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
 
-    <section id="resume" class="section container" aria-label="Resume">
-      <h2 class="section__title">Resume</h2>
-      <p class="section__text">
-        Download or view my full resume to learn more about my professional background and skills.
-      </p>
-      <button type="button" class="btn btn--primary" onclick="window.open('https://example.com/your-resume.pdf', '_blank')" aria-label="Download my resume">
-        Download Resume
-      </button>
-    </section>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required autocomplete="email" />
 
-    <section id="contact" class="section container" aria-label="Contact me">
-      <h2 class="section__title">Contact Me</h2>
-      <form class="contact-form" id="contact-form" novalidate>
-        <label for="name" class="form-label">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your full name" required aria-required="true" class="form-input" />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
 
-        <label for="email" class="form-label">Email</label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required aria-required="true" class="form-input" />
-
-        <label for="message" class="form-label">Message</label>
-        <textarea id="message" name="message" placeholder="Your message here..." required aria-required="true" class="form-textarea"></textarea>
-
-        <button type="submit" class="btn btn--primary" aria-label="Send message" id="send-btn">Send</button>
-      </form>
+          <button type="submit">
+            Send Message
+            <span class="material-icons" aria-hidden="true">send</span>
+          </button>
+          <div id="success-message" class="success-message" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
     </section>
   </main>
 
-  <script src="scripts.js"></script>
+  <footer role="contentinfo">
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js" defer></script>
 </body>
 </html>
+

@@ -1,35 +1,50 @@
+// Intersection observer to animate project cards on scroll
 document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contact-form');
-  if (!contactForm) return;
+  const cards = document.querySelectorAll('.project-card');
 
-  contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const name = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
-    const message = contactForm.message.value.trim();
-
-    if (!name || !email || !message) {
-      alert('Please fill in all fields before submitting.');
-      return;
-    }
-
-    try {
-      const response = await fetch('/.netlify/functions/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
-      });
-      if (!response.ok) {
-        const errorData = await response.json();
-        alert(`Error: ${errorData.error || 'Failed to send message'}`);
-        return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
-      alert('Thank you for reaching out! Your message has been sent.');
-      contactForm.reset();
-    } catch (error) {
-      alert('Network error: Unable to send message. Please try again later.');
-      console.error(error);
+    });
+  }, { threshold: 0.15 });
+
+  cards.forEach(card => observer.observe(card));
+});
+
+// Contact form JS to show success message without redirect
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+    method: this.method,
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: formData
+  }).then(response => {
+    if (response.ok) {
+      successMessage.textContent = "Thank you for your message! I'll get back to you soon.";
+      successMessage.classList.add('visible');
+      form.reset();
+    } else {
+      response.json().then(data => {
+        if(Object.hasOwn(data, 'errors')) {
+          successMessage.textContent = data["errors"].map(error => error.message).join(", ");
+        } else {
+          successMessage.textContent = "Oops! There was a problem submitting your form";
+        }
+        successMessage.classList.add('visible');
+      });
     }
+  }).catch(error => {
+    successMessage.textContent = "Oops! There was a problem submitting your form";
+    successMessage.classList.add('visible');
   });
 });
