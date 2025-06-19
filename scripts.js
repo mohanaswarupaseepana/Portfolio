@@ -1,5 +1,21 @@
 // Intersection observer to animate project cards on scroll
 document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('themeToggle');
+
+  // Load theme preference from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
   const cards = document.querySelectorAll('.project-card');
 
   const observer = new IntersectionObserver(entries => {
@@ -13,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cards.forEach(card => observer.observe(card));
 });
+
+
 
 // Contact form JS to show success message without redirect
 const form = document.getElementById('contact-form');

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name - Portfolio</title>
+  <title>Mohana Swarupa - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -11,12 +11,21 @@
 <body>
   <header>
     <div class="container navbar" role="banner">
-      <div class="logo" tabindex="0">YourName</div>
+      <div class="logo" tabindex="0">Mohana Swarupa</div>
       <nav aria-label="Primary navigation">
+        
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><div class="theme-toggle">
+  <span class="material-icons">light_mode</span>
+  <label class="switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider round"></span>
+  </label>
+</div>
+</li>
         </ul>
       </nav>
     </div>
@@ -25,37 +34,88 @@
   <main>
     <section id="hero" role="region" aria-label="Introduction">
       <div class="hero-content">
-        <h1>Hi, I'm Your Name</h1>
+        <h1>Hi, I'm <br> Mohana Swarupa Seepana </h1>
         <p>I'm a passionate developer creating modern web experiences with clean design and smooth animations.</p>
         <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact Me</button>
       </div>
     </section>
+    <section id="skills" role="region" aria-label="Skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="material-icons">code</span>
+      <h3>Web Technologies</h3>
+      <p>HTML5, CSS3, JavaScript, React</p>
+    </div>
+    <div class="card">
+      <span class="material-icons">storage</span>
+      <h3>Backend & DB</h3>
+      <p>Node.js, Express, MongoDB, Firebase</p>
+    </div>
+    <div class="card">
+      <span class="material-icons">devices</span>
+      <h3>Tools & Skills</h3>
+      <p>Git, GitHub, Figma, Responsive Design</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience" role="region" aria-label="Experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="material-icons">work</span>
+      <h3>Frontend Intern</h3>
+      <p><strong>XYZ Tech (Jun–Aug 2024)</strong><br>Built responsive React interfaces and integrated REST APIs.</p>
+    </div>
+    <div class="card">
+      <span class="material-icons">computer</span>
+      <h3>Freelance Web Dev</h3>
+      <p><strong>2023 – Present</strong><br>Designed and deployed multiple websites for clients with custom features.</p>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" role="region" aria-label="Achievements">
+  <h2 class="section-title">Achievements</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="material-icons">emoji_events</span>
+      <h3>Hackathon Winner</h3>
+      <p>1st Place in College Hackathon 2024</p>
+    </div>
+    <div class="card">
+      <span class="material-icons">school</span>
+      <h3>Certified</h3>
+      <p>Google UX Design Certification</p>
+    </div>
+    <div class="card">
+      <span class="material-icons">star</span>
+      <h3>Top Performer</h3>
+      <p>Full-Stack Bootcamp 2023</p>
+    </div>
+  </div>
+</section>
+
+<section id="cv-download" role="region" aria-label="Download CV">
+  <h2 class="section-title">Download CV</h2>
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <a href="assets/MohanaSwarupa_CV.pdf" download class="cv-button">
+      <span class="material-icons">download</span> Download My Resume
+    </a>
+  </div>
+</section>
+
 
     <section id="projects" role="region" aria-label="Projects showcase">
       <h2 class="section-title">My Projects</h2>
       <div class="project-grid">
         <article class="project-card" tabindex="0">
-          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f25e5f0a-139b-411c-8665-75603970f7ed.png" alt="Screenshot of Project 1 website" class="project-image" />
+          <img src="..\th.jpg" alt="Screenshot of Project 1 website" class="project-image" />
           <div class="project-content">
-            <h3 class="project-title">Project One</h3>
-            <p class="project-description">A responsive web app featuring interactive maps and real-time data visualizations.</p>
-            <a href="#" class="project-link" aria-label="View Project One details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
-          </div>
-        </article>
-        <article class="project-card" tabindex="0">
-          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4cf6da69-a9ec-487d-a66e-941499225f73.png" alt="Screenshot of Project 2 mobile app" class="project-image" />
-          <div class="project-content">
-            <h3 class="project-title">Project Two</h3>
-            <p class="project-description">A sleek mobile-first design with a custom UI and smooth animations throughout.</p>
-            <a href="#" class="project-link" aria-label="View Project Two details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
-          </div>
-        </article>
-        <article class="project-card" tabindex="0">
-          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a0af1f87-a5ec-40a5-b0e7-f47e898bcba1.png" alt="Screenshot of Project 3 dashboard" class="project-image" />
-          <div class="project-content">
-            <h3 class="project-title">Project Three</h3>
-            <p class="project-description">An admin dashboard with drag-and-drop features and real-time notifications.</p>
-            <a href="#" class="project-link" aria-label="View Project Three details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
+            <h3 class="project-title">My Portfolio</h3>
+            <p class="project-description">A personal website that showcases my skills, projects, and achievements in a clean and professional format.</p>
+            <a href="https://portfolio-mohanaswarupa.vercel.app/" class="project-link" aria-label="View Project One details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
           </div>
         </article>
       </div>
@@ -85,7 +145,7 @@
   </main>
 
   <footer role="contentinfo">
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
 
   <script src="scripts.js" defer></script>
