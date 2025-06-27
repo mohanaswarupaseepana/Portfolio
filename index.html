@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+              <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -13,35 +13,58 @@
     <div class="container navbar" role="banner">
       <div class="logo" tabindex="0">Mohana Swarupa</div>
       <nav aria-label="Primary navigation">
-        
         <ul>
           <li><a href="#hero">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#cv-download">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><div class="theme-toggle">
-  <span class="material-icons">light_mode</span>
-  <label class="switch">
-    <input type="checkbox" id="themeToggle">
-    <span class="slider round"></span>
-  </label>
-</div>
-</li>
+          <li>
+            <div class="theme-toggle">
+              <span class="material-icons">light_mode</span>
+              <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
     <section id="hero" role="region" aria-label="Introduction">
       <div class="hero-content">
-        <h1>Hi, I'm <br> Mohana Swarupa Seepana </h1>
-        <p>I'm a passionate developer creating modern web experiences with clean design and smooth animations.</p>
-        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact Me</button>
+  <div class="profile-photo">
+    <img src="../images/mohana.jpg" alt="Mohana Swarupa" />
+  </div>
+  <div class="text-intro">
+    <h1>Hi,I'm Seepana Mohana Swarupa  </h1>
+    <p>I'm a passionate developer creating modern web experiences with clean design and smooth animations.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact Me</button>
+  </div>
+</div>
+    </section>
+    <section id="education" role="region" aria-label="Education">
+      <h2 class="section-title">Education</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="material-icons">school</span>
+          <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+          <p><strong>JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY GURAJADA VIZIANAGARAM(JNTUGV)<br> (2022 - 2026)</strong></p>
+        </div>
       </div>
     </section>
     <section id="skills" role="region" aria-label="Skills">
   <h2 class="section-title">My Skills</h2>
   <div class="card-grid">
+    <div class="card">
+      <span class="material-icons">computer</span>
+      <h3>Programming Languages</h3>
+      <p>C, C++, Java, Python, R</p>
+    </div>
     <div class="card">
       <span class="material-icons">code</span>
       <h3>Web Technologies</h3>
@@ -50,12 +73,17 @@
     <div class="card">
       <span class="material-icons">storage</span>
       <h3>Backend & DB</h3>
-      <p>Node.js, Express, MongoDB, Firebase</p>
+      <p>Node.js, Express, MongoDB,Neo4j</p>
     </div>
     <div class="card">
       <span class="material-icons">devices</span>
-      <h3>Tools & Skills</h3>
-      <p>Git, GitHub, Figma, Responsive Design</p>
+      <h3>Tools </h3>
+      <p>Git, GitHub, Figma, Power BI</p>
+    </div>
+     <div class="card">
+      <span class="material-icons">people</span>
+      <h3>Soft Skills</h3>
+      <p>Problem Solving, Communication, Teamwork, Critical Thinking</p>
     </div>
   </div>
 </section>
@@ -65,14 +93,11 @@
   <div class="card-grid">
     <div class="card">
       <span class="material-icons">work</span>
-      <h3>Frontend Intern</h3>
-      <p><strong>XYZ Tech (Jun–Aug 2024)</strong><br>Built responsive React interfaces and integrated REST APIs.</p>
+      <h3>Full-Stack Intern</h3>
+      <p><strong>UptoSkills (May–Aug 2025)</strong><br> Built responsive React interfaces and integrated REST APIs in HRMS Project where all employees and HR's get connected in this platform
+    </p>
     </div>
-    <div class="card">
-      <span class="material-icons">computer</span>
-      <h3>Freelance Web Dev</h3>
-      <p><strong>2023 – Present</strong><br>Designed and deployed multiple websites for clients with custom features.</p>
-    </div>
+    
   </div>
 </section>
 
@@ -81,30 +106,25 @@
   <div class="card-grid">
     <div class="card">
       <span class="material-icons">emoji_events</span>
-      <h3>Hackathon Winner</h3>
-      <p>1st Place in College Hackathon 2024</p>
+      <h3> Honors </h3>
+      <p>Cybersecurity(2023, 2024)</p>
     </div>
     <div class="card">
       <span class="material-icons">school</span>
-      <h3>Certified</h3>
-      <p>Google UX Design Certification</p>
+      <h2>Certified</h2>
+      <p><b>HackerRank Python Certificate</b></p>
+      <p><b>Infosys Springboard:</b> Agile, DBMS, NoSQL, OOP, Power BI, PHP</p>
+      <p><b>Edx:</b>Web Development, Machine Learning with Python, R Basics, SQL, Linux Essentials</p>
+      <p><b>Professional Certificate:</b> LLMOps (7 AI courses)</p>
     </div>
     <div class="card">
       <span class="material-icons">star</span>
       <h3>Top Performer</h3>
-      <p>Full-Stack Bootcamp 2023</p>
+      <p>NPTEL IOT – Top 5% performer</p>
     </div>
   </div>
 </section>
 
-<section id="cv-download" role="region" aria-label="Download CV">
-  <h2 class="section-title">Download CV</h2>
-  <div style="text-align: center; margin-bottom: 2rem;">
-    <a href="assets/MohanaSwarupa_CV.pdf" download class="cv-button">
-      <span class="material-icons">download</span> Download My Resume
-    </a>
-  </div>
-</section>
 
 
     <section id="projects" role="region" aria-label="Projects showcase">
@@ -118,6 +138,23 @@
             <a href="https://portfolio-mohanaswarupa.vercel.app/" class="project-link" aria-label="View Project One details">View Details <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
           </div>
         </article>
+      </div>
+    </section>
+
+     <section id="activities" role="region" aria-label="Activities">
+      <h2 class="section-title">Activities</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="material-icons">group</span>
+          <h3>Coordinating Work</h3>
+          <p>Speaker – Webcraft Workshop (2024)</p>
+          <p>Technical Coordinator – JNTUGV Tech Fest (2025)</p>
+        </div>
+        <div class="card">
+          <span class="material-icons">code</span>
+          <h3>Contributor</h3>
+          <p>SIH 2024 – Open-Source Contributor</p>
+        </div>
       </div>
     </section>
 
@@ -143,11 +180,9 @@
       </div>
     </section>
   </main>
-
   <footer role="contentinfo">
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 Seepana Mohana Swarupa. All rights reserved.</p>
   </footer>
-
   <script src="scripts.js" defer></script>
 </body>
 </html>
